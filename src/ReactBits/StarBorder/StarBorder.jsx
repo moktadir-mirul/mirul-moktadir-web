@@ -10,8 +10,9 @@ const StarBorder = ({
   children,
   ...rest
 }) => {
-   
+    console.log(Component);
   return (
+   
     <Component
       className={`nav-bg star-border-container ${className} w-11/12 mx-auto rounded-full border border-gray-600`}
       style={{
