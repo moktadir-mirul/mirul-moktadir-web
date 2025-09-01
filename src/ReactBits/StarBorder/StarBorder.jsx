@@ -13,7 +13,7 @@ const StarBorder = ({
    
   return (
     <Component
-      className={`nav-bg star-border-container ${className} w-11/12 mx-auto my-1 rounded-full border border-gray-600`}
+      className={`nav-bg star-border-container ${className} w-11/12 mx-auto rounded-full border border-gray-600`}
       style={{
         padding: `${thickness}px 0`,
         ...rest.style
