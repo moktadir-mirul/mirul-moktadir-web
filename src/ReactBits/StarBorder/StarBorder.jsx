@@ -1,8 +1,8 @@
-import NavBar from '../../Component/NavBar/NavBar';
+
 import './StarBorder.css';
 
 const StarBorder = ({
-  as: Component = 'button',
+  as: Component = 'div',
   className = '',
   color = 'white',
   speed = '6s',
@@ -10,10 +10,10 @@ const StarBorder = ({
   children,
   ...rest
 }) => {
-    console.log(Component);
+   
   return (
     <Component
-      className={`nav-bg star-border-container ${className} w-11/12 mx-auto my-5 rounded-full border border-gray-600`}
+      className={`nav-bg star-border-container ${className} w-11/12 mx-auto my-1 rounded-full border border-gray-600`}
       style={{
         padding: `${thickness}px 0`,
         ...rest.style
@@ -34,7 +34,7 @@ const StarBorder = ({
           animationDuration: speed
         }}
       ></div>
-      <div className="inner-content"><NavBar></NavBar></div>
+      <div className="inner-content">{children}</div>
     </Component>
   );
 };
