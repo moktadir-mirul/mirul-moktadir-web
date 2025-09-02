@@ -1,6 +1,7 @@
 import React from "react";
 import PortImg from "../../assets/portfolio-imgNbg.png";
 import ShinyText from "../../ReactBits/ShinyText/ShinyText";
+import RotatingText from "../../ReactBits/RotatingText/RotatingText";
 
 const Banner = () => {
   return (
@@ -23,6 +24,19 @@ const Banner = () => {
             speed={3}
             className="custom-class text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
           />
+          <RotatingText
+            texts={["FrontEnd Developer", "MERN Stack Developer", "Full Stack Developer"]}
+            mainClassName="text-5xl text-green-50 font-semibold overflow-hidden py-0.5 sm:py-1 md:py-2 justify-start rounded-lg"
+            staggerFrom={"last"}
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-120%" }}
+            staggerDuration={0.025}
+            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+            rotationInterval={3000}
+          />
+          <p className="max-w-[50%]">Hi, I’m Mirul Moktadir Khan! I’m a passionate MERN stack enthusiast who loves turning ideas into interactive web experiences. I enjoy learning, experimenting, and building projects that make the web more fun and user-friendly. Every line of code I write takes me one step closer to becoming the developer I dream to be!</p>
         </div>
       </div>
 
