@@ -1,0 +1,29 @@
+.shiny-text {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to bottom right, oklch(78.9% 0.154 211.53), oklch(97.913% 0.00011 271.152), oklch(90.5% 0.182 98.111)); 
+  /* background: linear-gradient(
+    120deg,
+    oklch(78.9% 0.154 211.53),
+    
+    oklch(90.5% 0.182 98.111)
+  ); */
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
