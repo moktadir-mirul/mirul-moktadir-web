@@ -67,7 +67,7 @@ const NavBar = () => {
 
         {/* Button Area */}
         <div className="text-black text-lg font-medium">
-          <button className="flex items-center gap-2 px-10 py-2 bg-gradient-to-r rounded-4xl from-primary to-secondary">
+          <button className="flex items-center gap-2 px-10 py-2 bg-gradient-to-r rounded-4xl from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:to-primary cursor-pointer duration-400 transition">
             <FaFileDownload size={20}></FaFileDownload> Download
           </button>
         </div>
