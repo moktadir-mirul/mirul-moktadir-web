@@ -7,24 +7,22 @@ import DotGrid from "../../ReactBits/DotGrid/DotGrid";
 
 const NavBanner = () => {
   return (
-    <div className="relative w-full min-h-screen pt-5">
-         <div className="absolute inset-0 -z-10">
-            <DotGrid
-         className=""
-    dotSize={3}
-    gap={18}
-    baseColor="#14532d"
-    activeColor="#166534"
-    proximity={120}
-    shockRadius={250}
-    shockStrength={10}
-    resistance={750}
-    returnDuration={1.5}
-  />
-    
- 
-         </div>
-       <nav>
+    <div className="relative w-full pt-5">
+      <div className="absolute inset-0 -z-10">
+        <DotGrid
+          className=""
+          dotSize={3}
+          gap={18}
+          baseColor="#14532d"
+          activeColor="#166534"
+          proximity={120}
+          shockRadius={250}
+          shockStrength={10}
+          resistance={750}
+          returnDuration={1.5}
+        />
+      </div>
+      <nav>
         <StarBorder
           as="div"
           className="custom-class"

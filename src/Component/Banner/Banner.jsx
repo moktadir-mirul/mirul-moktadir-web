@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import PortImg from "../../assets/portfolio-imgNbg.png";
+import PortImg from "../../assets/portfolio-imgNbgg.png";
 import ShinyText from "../../ReactBits/ShinyText/ShinyText";
 import RotatingText from "../../ReactBits/RotatingText/RotatingText";
 import { FaFileDownload, FaLinkedinIn } from "react-icons/fa";
@@ -16,18 +16,18 @@ const Banner = () => {
       circleRef.current,
       { rotate: [0, 180, 0] },
       {
-        duration: 10, // 6 seconds for full back & forth
-        ease: "easeInOut", // Smooth easing
-        repeat: Infinity, // Infinite loop
+        duration: 10,
+        ease: "easeInOut", 
+        repeat: Infinity, 
       }
     );
 
     return () => controls.stop();
   }, []);
   return (
-    <div className="w-11/12 mx-auto py-10 flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10">
+    <div className="w-11/12 mx-auto py-10 flex flex-col lg:flex-row justify-between items-center gap-10">
       {/* Text Area */}
-      <div className="border border-gray-50  text-center md:text-left flex-1 flex flex-col justify-between">
+      <div className="text-center md:text-left flex-1 flex flex-col justify-between h-full space-y-5 md:space-y-6 lg:space-y-7 xl:space-y-12">
         {/* Theme Sentence */}
         <div className="flex gap-2 items-center justify-center md:justify-start">
           <div className="hidden md:block bg-gradient-to-r from-primary to-secondary w-4 h-4 rounded-full"></div>
@@ -37,12 +37,12 @@ const Banner = () => {
         </div>
 
         {/* Intro */}
-        <div className="">
+        <div className="space-y-3">
           <ShinyText
             text="I'm Mirul Moktadir"
             disabled={false}
             speed={3}
-            className="custom-class text-5xl sm:text-6xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+            className="custom-class epun tracking-wide text-5xl sm:text-6xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
           />
           <RotatingText
             texts={[
@@ -62,12 +62,9 @@ const Banner = () => {
           />
           <p className="mx-auto md:mx-0 text-lg sm:text-xl tracking-wider">
             Hi, I’m Mirul Moktadir Khan! I’m a passionate MERN stack enthusiast
-            who loves turning ideas into interactive web experiences.
-            {/* I enjoy learning,
-        experimenting, and building projects that make the web more fun and
-        user-friendly.  */}
-            Every line of code I write takes me one step closer to becoming the
-            developer I dream to be!
+            who loves turning ideas into interactive web experiences. Every line
+            of code I write takes me one step closer to becoming the developer I
+            dream to be!
           </p>
         </div>
 
@@ -102,7 +99,7 @@ const Banner = () => {
           </Link>
         </div>
         {/* Button Area */}
-        <div className="flex justify-center lg:justify-start">
+        <div className="flex justify-center md:justify-start">
           <button className="flex items-center text-black gap-2 px-8 py-3 sm:px-10 sm:py-4 bg-gradient-to-r rounded-4xl from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:to-primary cursor-pointer duration-400 transition text-xl font-semibold">
             <FaFileDownload size={20} /> Download
           </button>
@@ -110,7 +107,7 @@ const Banner = () => {
       </div>
 
       {/* Image Area */}
-      <div className="flex-1  flex justify-center md:justify-end">
+      <div className="flex-1 flex justify-center md:justify-end h-full">
         <div
           ref={circleRef}
           className="hidden lg:block nav-bg p-2 border border-gray-600"
