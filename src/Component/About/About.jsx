@@ -1,4 +1,6 @@
+
 import React, { useEffect, useState } from "react";
+import { FaAddressCard, FaUserLarge } from "react-icons/fa6";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("skills");
@@ -12,38 +14,43 @@ const About = () => {
   return (
     <section id="about" className=" py-16 px-4 md:px-8 lg:px-16">
       <div>
-        <div className="flex gap-3 justify-center md:justify-start items-center">
-          <div className="hidden md:block bg-gradient-to-r from-primary to-secondary w-8 h-8 rounded-full"></div>
-          <h2 className="text-4xl md:text-6xl font-bold epun tracking-wide">
+        <div className="flex gap-3 justify-center text-4xl md:text-6xl md:justify-start items-center">
+          <FaAddressCard style={{color: "#22d3ee"}}/>
+          <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold epun tracking-wide">
             About Me
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="pt-5 flex flex-col lg:flex-row gap-12 items-center">
           {/* Text Content */}
           <div className="flex-1">
-            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-slate-100">
-              <h3 className="text-2xl font-semibold mb-4 text-slate-800">
-                Hello! I'm Alex
+            <div className="bg-green-900 rounded-2xl p-6 md:p-8 shadow-lg border border-green-800">
+              <h3 className="text-2xl font-semibold mb-4">
+                Hey there!
               </h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                I'm a passionate frontend developer with expertise in creating
-                beautiful, functional web experiences. With over 3 years of
-                experience, I specialize in React, JavaScript, and modern CSS
-                frameworks like Tailwind.
+              <p className="mb-6 tracking-wide text-lg leading-relaxed">
+                 I'm a passionate and curious full-stack web developer who
+            started exploring the world of programming in 2024. My journey began
+            with a mix of YouTube tutorials, tech books, and the hands-on
+            curriculum at Programming Hero, where I built a solid foundation in
+            <strong>
+              {" "}
+              HTML, CSS, JavaScript, React.js,, Node.js, Express.js, and MongoDB
+            </strong>
+            .
               </p>
 
               {/* Interactive Tabs */}
               <div className="mb-6">
                 <div className="flex space-x-2 mb-4">
-                  {["skills", "experience", "education"].map((tab) => (
+                  {["Passion", "experience", "education"].map((tab) => (
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
-                      className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                      className={`px-4 py-2 rounded-full text-lg font-semibold transition-colors ${
                         activeTab === tab
-                          ? "bg-blue-600 text-white"
-                          : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                          ? "bg-gradient-to-r from-cyan-700 to-amber-700"
+                          : "cursor-pointer text-black bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200"
                       }`}
                     >
                       {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -52,7 +59,7 @@ const About = () => {
                 </div>
 
                 <div className="min-h-[120px]">
-                  {activeTab === "skills" && (
+                  {activeTab === "Passion" && (
                     <div className="grid grid-cols-2 gap-3">
                       {[
                         "React",
@@ -239,5 +246,3 @@ const About = () => {
 };
 
 export default About;
-
-
