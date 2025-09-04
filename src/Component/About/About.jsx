@@ -1,9 +1,29 @@
 
+import { Button } from "flowbite-react";
 import React, { useEffect, useState } from "react";
 import { FaAddressCard, FaUserLarge } from "react-icons/fa6";
+import { TabItem } from "flowbite-react";
+import { HiAdjustments, HiClipboardList, HiUserCircle } from "react-icons/hi";
+import { MdDashboard } from "react-icons/md";
+import { Tabs } from "flowbite-react";
+import { FiCompass } from "react-icons/fi";
+import { GiLotus } from "react-icons/gi";
+import { RiLinksLine } from "react-icons/ri";
+import { FaCloudDownloadAlt } from "react-icons/fa";
+import DecryptedText from "../../ReactBits/DecryptedText/DecryptedText";
+
+const customTheme = {
+  tabitem: {
+    base: "px-4 py-2 rounded-md transition-all duration-300",
+    active: {
+      on: "text-black bg-gradient-to-r from-primary to-secondary",
+      off: "text-white bg-white hover:bg-gray-100",
+    },
+  },
+};
 
 const About = () => {
-  const [activeTab, setActiveTab] = useState("skills");
+ 
 
   // Animation for the graphic element
   const [mounted, setMounted] = useState(false);
@@ -15,7 +35,7 @@ const About = () => {
     <section id="about" className=" py-16 px-4 md:px-8 lg:px-16">
       <div>
         <div className="flex gap-3 justify-center text-4xl md:text-6xl md:justify-start items-center">
-          <FaAddressCard style={{color: "#22d3ee"}}/>
+          <FaAddressCard style={{ color: "#22d3ee" }} />
           <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold epun tracking-wide">
             About Me
           </h2>
@@ -25,23 +45,23 @@ const About = () => {
           {/* Text Content */}
           <div className="flex-1">
             <div className="bg-green-900 rounded-2xl p-6 md:p-8 shadow-lg border border-green-800">
-              <h3 className="text-2xl font-semibold mb-4">
-                Hey there!
-              </h3>
+              <h3 className="text-2xl font-semibold mb-4">Hey there!</h3>
               <p className="mb-6 tracking-wide text-lg leading-relaxed">
-                 I'm a passionate and curious full-stack web developer who
-            started exploring the world of programming in 2024. My journey began
-            with a mix of YouTube tutorials, tech books, and the hands-on
-            curriculum at Programming Hero, where I built a solid foundation in
-            <strong>
-              {" "}
-              HTML, CSS, JavaScript, React.js,, Node.js, Express.js, and MongoDB
-            </strong>
-            .
+                I'm a passionate and curious full-stack web developer who
+                started exploring the world of programming in 2024. My journey
+                began with a mix of YouTube tutorials, tech books, and the
+                hands-on curriculum at Programming Hero, where I built a solid
+                foundation in
+                <strong>
+                  {" "}
+                  HTML, CSS, JavaScript, React.js,, Node.js, Express.js, and
+                  MongoDB
+                </strong>
+                .
               </p>
 
               {/* Interactive Tabs */}
-              <div className="mb-6">
+              {/* <div className="mb-6">
                 <div className="flex space-x-2 mb-4">
                   {["Passion", "experience", "education"].map((tab) => (
                     <button
@@ -105,10 +125,47 @@ const About = () => {
                     </div>
                   )}
                 </div>
-              </div>
+              </div> */}
 
-              <button className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-md">
-                Download Resume
+              {/* <Tabs>
+                <TabList>
+                  <Tab>Title 1</Tab>
+                  <Tab>Title 2</Tab>
+                  <Tab>Title 2</Tab>
+                </TabList>
+
+                <TabPanel>
+                  <h2>Any content 1</h2>
+                </TabPanel>
+                <TabPanel>
+                  <h2>Any content 2</h2>
+                </TabPanel>
+              </Tabs> */}
+
+              <Tabs aria-label="Default tabs" className="text-white text-lg tracking-wide" variant="default" theme={customTheme}>
+                <TabItem active title="Synergy" icon={RiLinksLine}>
+                  <DecryptedText
+  text="For me, coding is all about synergy — the perfect blend of design and logic, creativity and structure. Among all technologies, React feels like my ideal space to bring this harmony to life. I love crafting interactive web applications that are smooth, dynamic, and purposeful. Building full-stack projects gives me the thrill of solving real problems from end to end — combining aesthetics, functionality, and performance into one seamless experience."
+  animateOn="view"
+  speed={200}
+  maxIterations={10}
+  revealDirection="start"
+/>
+                </TabItem>
+                <TabItem title="Beyond" icon={FiCompass}>
+                  <p>
+                    Beyond the screen, I’m a big fan of mystery and spy thrillers — both in books and films. You'll often find me diving into the pages of a gripping Bangla novel or binge-watching sci-fi series like Foundation. I also enjoy exploring new places and cultures — traveling refreshes my creativity and helps me see the world through different lenses.
+                  </p>
+                </TabItem>
+                <TabItem title="Essence" icon={GiLotus}>
+                  <p>
+                    As a person, I'm detail-oriented, always eager to learn independently, and driven by curiosity. I enjoy figuring things out on my own but also love collaborating with others who share a passion for clean code and clever solutions. Whether it's coding, reading, or exploring, I'm always looking for stories — whether to build them, read them, or live them.
+                  </p>
+                </TabItem>
+              </Tabs>
+
+              <button className="px-6 py-3 bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-full">
+                <FaCloudDownloadAlt /> Download Resume
               </button>
             </div>
           </div>

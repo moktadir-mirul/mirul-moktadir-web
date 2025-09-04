@@ -1,7 +1,13 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
 @theme {
   --color-primary: #3B82F6;
   --color-secondary: #6366F1;
   --color-neutral: #1F2937;
   --color-accent: #FBBF24;
+}
+
+ul[role="tablist"] li button {
+  background-image: linear-gradient(to right, oklch(78.9% 0.154 211.53),oklch(90.5% 0.182 98.111));
 }

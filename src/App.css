@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
 
 /* @theme {
   --color-primary: #3B82F6;
@@ -18,5 +20,6 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5.3px);
 -webkit-backdrop-filter: blur(5.3px);
 }
-
-
+ul[role="tablist"] li button {
+  background-image: linear-gradient(to right, oklch(78.9% 0.154 211.53),oklch(90.5% 0.182 98.111));
+}
