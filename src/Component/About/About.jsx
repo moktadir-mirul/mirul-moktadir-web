@@ -10,6 +10,8 @@ import { GiLotus } from "react-icons/gi";
 import { RiLinksLine } from "react-icons/ri";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import DecryptedText from "../../ReactBits/DecryptedText/DecryptedText";
+import Lottie from "lottie-react";
+import AboutMe from "../../LottieJson/aboutMe.json"
 
 const customTheme = {
   "base": "flex flex-col gap-2",
@@ -58,11 +60,18 @@ const About = () => {
         <div className="flex gap-3 justify-center text-4xl md:text-6xl md:justify-start items-center">
           <FaAddressCard style={{ color: "#22d3ee" }} />
           <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold epun tracking-wide">
-            About Me
+            {/* About Me */}
+            <DecryptedText
+                    text="About Me"
+                    animateOn="view"
+                    speed={150}
+                    maxIterations={10}
+                    revealDirection="start"
+                  />
           </h2>
         </div>
 
-        <div className="pt-5 flex flex-col lg:flex-row gap-12 items-center">
+        <div className="pt-5 flex flex-col lg:flex-row gap-12 items-center lg:items-start">
           {/* Text Content */}
           <div className="flex-1">
             <div className="bg-green-900 rounded-2xl p-6 md:p-8 shadow-lg border border-green-800">
@@ -206,125 +215,54 @@ const About = () => {
 
           {/* Graphic/Visual Element */}
           <div className="flex-1 flex justify-center">
-            <div className="relative w-full max-w-md">
+            <div className=" w-full max-w-md">
               {/* Main graphic container */}
-              <div className="relative h-80">
-                {/* Background elements */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div
-                    className={`w-64 h-64 rounded-full bg-blue-200 opacity-30 blur-xl transition-all duration-1000 ${
-                      mounted ? "scale-100" : "scale-0"
-                    }`}
-                  ></div>
-                </div>
-
-                {/* Animated circles */}
-                <div
-                  className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full border-4 border-blue-600/20 transition-all duration-700 ${
-                    mounted ? "scale-100" : "scale-0"
-                  }`}
-                ></div>
-                <div
-                  className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border-4 border-blue-600/30 transition-all duration-1000 ${
-                    mounted ? "scale-100" : "scale-0"
-                  }`}
-                ></div>
-                <div
-                  className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full border-4 border-blue-600/40 transition-all duration-1200 ${
-                    mounted ? "scale-100" : "scale-0"
-                  }`}
-                ></div>
-
-                {/* Central graphic - can be replaced with an image or SVG */}
-                <div
-                  className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-1500 ${
-                    mounted ? "opacity-100 scale-100" : "opacity-0 scale-75"
-                  }`}
-                >
-                  <div className="relative">
-                    <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl flex items-center justify-center shadow-lg">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-16 w-16 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                        />
-                      </svg>
-                    </div>
-
-                    {/* Floating elements */}
-                    <div
-                      className={`absolute -top-4 -right-4 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-1000 ${
-                        mounted ? "opacity-100" : "opacity-0"
-                      }`}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"
-                        />
-                      </svg>
-                    </div>
-
-                    <div
-                      className={`absolute -bottom-4 -left-4 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-1200 ${
-                        mounted ? "opacity-100" : "opacity-0"
-                      }`}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
+              <div className="">
+                <Lottie animationData={AboutMe} loop={true}></Lottie>
               </div>
 
               {/* Stats at bottom */}
               <div className="grid grid-cols-3 gap-4 mt-8">
                 {[
-                  { number: "15+", label: "Projects" },
-                  { number: "3+", label: "Years" },
-                  { number: "10+", label: "Clients" },
+                  { number: "15+", label: "Projects Built" },
+                  { number: "500+", label: "Hours Coding" },
+                  { number: "5+", label: "Tech Skills" },
                 ].map((stat, index) => (
                   <div
                     key={index}
-                    className={`bg-white p-4 rounded-xl shadow-md text-center transition-all duration-500 ${
+                    className={`bg-gray-200 p-1 rounded-xl shadow-md text-center transition-all duration-500 ${
                       mounted
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-4"
                     }`}
                     style={{ transitionDelay: `${300 + index * 100}ms` }}
                   >
-                    <div className="text-2xl font-bold text-blue-600">
+                    <div className="text-2xl font-bold text-green-700">
                       {stat.number}
                     </div>
-                    <div className="text-sm text-slate-600">{stat.label}</div>
+                    <div className="text-lg font-medium text-gray-800">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="grid grid-cols-3 gap-4 mt-8">
+                {[
+                  { number: "4", label: "Key Projects" },
+                  {number: "100%", label: "Enthusiasm"},
+                  { number: "∞", label: "Curiosity" },
+                ].map((stat, index) => (
+                  <div
+                    key={index}
+                    className={`bg-gray-300 p-1 rounded-xl shadow-md text-center transition-all duration-500 ${
+                      mounted
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-4"
+                    }`}
+                    style={{ transitionDelay: `${300 + index * 100}ms` }}
+                  >
+                    <div className="text-2xl font-bold text-green-700">
+                      {stat.number}
+                    </div>
+                    <div className="text-lg font-medium text-slate-800">{stat.label}</div>
                   </div>
                 ))}
               </div>
