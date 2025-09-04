@@ -1,4 +1,3 @@
-
 import { Button } from "flowbite-react";
 import React, { useEffect, useState } from "react";
 import { FaAddressCard, FaUserLarge } from "react-icons/fa6";
@@ -13,18 +12,40 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 import DecryptedText from "../../ReactBits/DecryptedText/DecryptedText";
 
 const customTheme = {
-  tabitem: {
-    base: "px-4 py-2 rounded-md transition-all duration-300",
-    active: {
-      on: "text-black bg-gradient-to-r from-primary to-secondary",
-      off: "text-white bg-white hover:bg-gray-100",
+  "base": "flex flex-col gap-2",
+  "tablist": {
+    "base": "flex text-center",
+    "variant": {
+      "default": "flex-wrap border-b border-gray-200 dark:border-gray-700",
     },
+    "tabitem": {
+      "base": "flex items-center justify-center rounded-t-lg p-4 text-lg font-medium first:ml-0 focus:outline-none cursor-pointer",
+      "variant": {
+        "default": {
+          "base": "rounded-t-lg",
+          "active": {
+            "on": "text-black bg-gradient-to-r from-primary to-secondary",
+            "off": "text-gray-400 hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-black"
+          }
+        },
+        
+      },
+      "icon": "mr-2 h-5 w-5"
+    }
   },
-};
+  "tabitemcontainer": {
+    "base": "",
+    "variant": {
+      "default": "",
+      "underline": "",
+      "pills": "",
+      "fullWidth": ""
+    }
+  },
+  "tabpanel": "py-3"
+}
 
 const About = () => {
- 
-
   // Animation for the graphic element
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -142,25 +163,38 @@ const About = () => {
                 </TabPanel>
               </Tabs> */}
 
-              <Tabs aria-label="Default tabs" className="text-white text-lg tracking-wide" variant="default" theme={customTheme}>
+              <Tabs
+                aria-label="Default tabs"
+                className="text-white text-lg tracking-wide"
+                variant="default"
+                theme={customTheme}
+              >
                 <TabItem active title="Synergy" icon={RiLinksLine}>
                   <DecryptedText
-  text="For me, coding is all about synergy — the perfect blend of design and logic, creativity and structure. Among all technologies, React feels like my ideal space to bring this harmony to life. I love crafting interactive web applications that are smooth, dynamic, and purposeful. Building full-stack projects gives me the thrill of solving real problems from end to end — combining aesthetics, functionality, and performance into one seamless experience."
-  animateOn="view"
-  speed={200}
-  maxIterations={10}
-  revealDirection="start"
-/>
+                    text="For me, coding is all about synergy — the perfect blend of design and logic, creativity and structure. Among all technologies, React feels like my ideal space to bring this harmony to life. I love crafting interactive web applications that are smooth, dynamic, and purposeful. Building full-stack projects gives me the thrill of solving real problems from end to end — combining aesthetics, functionality, and performance into one seamless experience."
+                    animateOn="view"
+                    speed={150}
+                    maxIterations={10}
+                    revealDirection="start"
+                  />
                 </TabItem>
                 <TabItem title="Beyond" icon={FiCompass}>
-                  <p>
-                    Beyond the screen, I’m a big fan of mystery and spy thrillers — both in books and films. You'll often find me diving into the pages of a gripping Bangla novel or binge-watching sci-fi series like Foundation. I also enjoy exploring new places and cultures — traveling refreshes my creativity and helps me see the world through different lenses.
-                  </p>
+                  <DecryptedText
+                    text="Beyond the screen, I’m a big fan of mystery and spy thrillers — both in books and films. You'll often find me diving into the pages of a gripping Bangla novel or binge-watching sci-fi series like Foundation. I also enjoy exploring new places and cultures — traveling refreshes my creativity and helps me see the world through different lenses."
+                    animateOn="view"
+                    speed={150}
+                    maxIterations={10}
+                    revealDirection="start"
+                  />
                 </TabItem>
                 <TabItem title="Essence" icon={GiLotus}>
-                  <p>
-                    As a person, I'm detail-oriented, always eager to learn independently, and driven by curiosity. I enjoy figuring things out on my own but also love collaborating with others who share a passion for clean code and clever solutions. Whether it's coding, reading, or exploring, I'm always looking for stories — whether to build them, read them, or live them.
-                  </p>
+                  <DecryptedText
+                    text="As a person, I'm detail-oriented, always eager to learn independently, and driven by curiosity. I enjoy figuring things out on my own but also love collaborating with others who share a passion for clean code and clever solutions. Whether it's coding, reading, or exploring, I'm always looking for stories — whether to build them, read them, or live them."
+                    animateOn="view"
+                    speed={150}
+                    maxIterations={10}
+                    revealDirection="start"
+                  />
                 </TabItem>
               </Tabs>
 
