@@ -55,7 +55,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className=" py-16 px-4 md:px-8 lg:px-16">
+    <section id="about" className="py-8 lg:py-16 px-4 md:px-8 lg:px-16">
       <div>
         <div className="flex gap-3 justify-center text-4xl md:text-6xl md:justify-start items-center">
           <FaAddressCard style={{ color: "#22d3ee" }} />
@@ -182,7 +182,7 @@ const About = () => {
                   <DecryptedText
                     text="For me, coding is all about synergy — the perfect blend of design and logic, creativity and structure. Among all technologies, React feels like my ideal space to bring this harmony to life. I love crafting interactive web applications that are smooth, dynamic, and purposeful. Building full-stack projects gives me the thrill of solving real problems from end to end — combining aesthetics, functionality, and performance into one seamless experience."
                     animateOn="view"
-                    speed={150}
+                    speed={100}
                     maxIterations={10}
                     revealDirection="start"
                   />
@@ -191,7 +191,7 @@ const About = () => {
                   <DecryptedText
                     text="Beyond the screen, I’m a big fan of mystery and spy thrillers — both in books and films. You'll often find me diving into the pages of a gripping Bangla novel or binge-watching sci-fi series like Foundation. I also enjoy exploring new places and cultures — traveling refreshes my creativity and helps me see the world through different lenses."
                     animateOn="view"
-                    speed={150}
+                    speed={100}
                     maxIterations={10}
                     revealDirection="start"
                   />
@@ -200,7 +200,7 @@ const About = () => {
                   <DecryptedText
                     text="As a person, I'm detail-oriented, always eager to learn independently, and driven by curiosity. I enjoy figuring things out on my own but also love collaborating with others who share a passion for clean code and clever solutions. Whether it's coding, reading, or exploring, I'm always looking for stories — whether to build them, read them, or live them."
                     animateOn="view"
-                    speed={150}
+                    speed={100}
                     maxIterations={10}
                     revealDirection="start"
                   />
