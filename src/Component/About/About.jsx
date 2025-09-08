@@ -11,41 +11,40 @@ import { RiLinksLine } from "react-icons/ri";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import DecryptedText from "../../ReactBits/DecryptedText/DecryptedText";
 import Lottie from "lottie-react";
-import AboutMe from "../../LottieJson/aboutMe.json"
+import AboutMe from "../../LottieJson/aboutMe.json";
 
 const customTheme = {
-  "base": "flex flex-col gap-2",
-  "tablist": {
-    "base": "flex text-center",
-    "variant": {
-      "default": "flex-wrap border-b border-gray-200 dark:border-gray-700",
+  base: "flex flex-col gap-2",
+  tablist: {
+    base: "flex text-center",
+    variant: {
+      default: "flex-wrap border-b border-gray-200 dark:border-gray-700",
     },
-    "tabitem": {
-      "base": "flex items-center justify-center rounded-t-lg p-4 text-lg font-medium first:ml-0 focus:outline-none cursor-pointer",
-      "variant": {
-        "default": {
-          "base": "rounded-t-lg",
-          "active": {
-            "on": "text-black bg-gradient-to-r from-primary to-secondary",
-            "off": "text-gray-400 hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-black"
-          }
+    tabitem: {
+      base: "flex items-center justify-center rounded-t-lg p-4 text-lg font-medium first:ml-0 focus:outline-none cursor-pointer",
+      variant: {
+        default: {
+          base: "rounded-t-lg",
+          active: {
+            on: "text-black bg-gradient-to-r from-primary to-secondary",
+            off: "text-gray-400 hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-black",
+          },
         },
-        
       },
-      "icon": "mr-2 h-5 w-5"
-    }
+      icon: "mr-2 h-5 w-5",
+    },
   },
-  "tabitemcontainer": {
-    "base": "",
-    "variant": {
-      "default": "",
-      "underline": "",
-      "pills": "",
-      "fullWidth": ""
-    }
+  tabitemcontainer: {
+    base: "",
+    variant: {
+      default: "",
+      underline: "",
+      pills: "",
+      fullWidth: "",
+    },
   },
-  "tabpanel": "py-3"
-}
+  tabpanel: "py-3",
+};
 
 const About = () => {
   // Animation for the graphic element
@@ -62,12 +61,12 @@ const About = () => {
           <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold epun tracking-wide">
             {/* About Me */}
             <DecryptedText
-                    text="About Me"
-                    animateOn="view"
-                    speed={150}
-                    maxIterations={10}
-                    revealDirection="start"
-                  />
+              text="About Me"
+              animateOn="view"
+              speed={150}
+              maxIterations={10}
+              revealDirection="start"
+            />
           </h2>
         </div>
 
@@ -230,7 +229,7 @@ const About = () => {
                 ].map((stat, index) => (
                   <div
                     key={index}
-                    className={`bg-gray-200 p-1 rounded-xl shadow-md text-center transition-all duration-500 ${
+                    className={`bg-gray-200 hover:scale-x-105 p-1 rounded-xl shadow-md text-center transition-all duration-200 cursor-pointer ${
                       mounted
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-4"
@@ -240,19 +239,21 @@ const About = () => {
                     <div className="text-2xl font-bold text-green-700">
                       {stat.number}
                     </div>
-                    <div className="text-lg font-medium text-gray-800">{stat.label}</div>
+                    <div className="text-lg font-medium text-gray-800">
+                      {stat.label}
+                    </div>
                   </div>
                 ))}
               </div>
               <div className="grid grid-cols-3 gap-4 mt-8">
                 {[
                   { number: "4", label: "Key Projects" },
-                  {number: "100%", label: "Enthusiasm"},
+                  { number: "100%", label: "Enthusiasm" },
                   { number: "∞", label: "Curiosity" },
                 ].map((stat, index) => (
                   <div
                     key={index}
-                    className={`bg-gray-300 p-1 rounded-xl shadow-md text-center transition-all duration-500 ${
+                    className={`bg-gray-300 p-1 rounded-xl shadow-md text-center transition-all duration-500 cursor-pointer hover:scale-x-105 ${
                       mounted
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-4"
@@ -262,7 +263,9 @@ const About = () => {
                     <div className="text-2xl font-bold text-green-700">
                       {stat.number}
                     </div>
-                    <div className="text-lg font-medium text-slate-800">{stat.label}</div>
+                    <div className="text-lg font-medium text-slate-800">
+                      {stat.label}
+                    </div>
                   </div>
                 ))}
               </div>
