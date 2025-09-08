@@ -207,7 +207,7 @@ const About = () => {
                 </TabItem>
               </Tabs>
 
-              <button className="px-6 py-3 bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-full">
+              <button className="px-6 cursor-pointer py-3 bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-full">
                 <FaCloudDownloadAlt /> Download Resume
               </button>
             </div>
