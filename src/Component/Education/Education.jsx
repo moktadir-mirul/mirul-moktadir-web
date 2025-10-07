@@ -1,26 +1,65 @@
 import React from "react";
 import DecryptedText from "../../ReactBits/DecryptedText/DecryptedText";
+import { TbCertificate } from "react-icons/tb";
+import { IoNewspaper } from "react-icons/io5";
 import { FaToolbox } from "react-icons/fa";
+import { LiaCertificateSolid } from "react-icons/lia";
 import { GiBookCover } from "react-icons/gi";
 import { FaGraduationCap } from "react-icons/fa";
 
-
 const Education = () => {
-  const timelineData = [
+  // const timelineData = [
+  //   {
+  //     year: "2010",
+  //     title: "SSC",
+  //     description: "Completed Secondary School Certificate with GPA 5.00",
+  //   },
+  //   {
+  //     year: "2012",
+  //     title: "HSC",
+  //     description: "Completed Higher Secondary Certificate with GPA 5.00",
+  //   },
+  //   {
+  //     year: "2016",
+  //     title: "B.Sc in EEE",
+  //     description:
+  //       "Graduated from IUBAT University in Electrical & Electronics Engineering",
+  //   },
+  // ];
+
+  const eduData = [
     {
-      year: "2010",
-      title: "SSC",
-      description: "Completed Secondary School Certificate with GPA 5.00",
+      id: 1,
+      degree: "Complete Web Development",
+      period: "2024-2025",
+      university: "Programming Hero",
+      icon: LiaCertificateSolid,
+      description: "",
     },
     {
-      year: "2012",
-      title: "HSC",
-      description: "Completed Higher Secondary Certificate with GPA 5.00",
+      id: 2,
+      degree: "Bachelor of Science in EEE",
+      period: "2011-2016",
+      university:
+        "International University of Business Agriculture and Technology",
+      icon: FaGraduationCap,
+      description: "",
     },
     {
-      year: "2016",
-      title: "B.Sc in EEE",
-      description: "Graduated from IUBAT University in Electrical & Electronics Engineering",
+      id: 3,
+      degree: "Higher Secondary Ceritifcate",
+      period: "2009-2011",
+      university: "Dhaka Board",
+      icon: TbCertificate,
+      description: "",
+    },
+    {
+      id: 4,
+      degree: "Secondary School Certificate",
+      period: "2006-2008",
+      university: "Dhaka Board",
+      icon: IoNewspaper,
+      description: "",
     },
   ];
 
@@ -42,40 +81,72 @@ const Education = () => {
           </h2>
         </div>
       </div>
+
       {/*Timeline  */}
       <div className="py-10 w-11/12 mx-auto">
-        <section className="relative flex flex-col items-center w-full py-12">
-      {/* Vertical line */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-full bg-gradient-to-b from-primary to-secondary rounded-full" />
+        {/* Gemini */}
+        <div className="relative pt-15 pb-0">
+          {/* Timeline line */}
+          <div className="absolute left-4 -translate-x-1/2 md:left-1/2 h-full w-5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
 
-      <div className="flex flex-col gap-16 w-full max-w-4xl">
-        {timelineData.map((item, index) => (
-          <div
-            key={index}
-            className={`flex flex-col md:flex-row items-center gap-6 ${
-              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            }`}
-          >
-            {/* Content */}
-            <div className="flex-1 bg-green-900  shadow-md rounded-xl p-6 border border-green-700 ">
-              <h3 className="text-xl font-bold text-primary">{item.year} - {item.title}</h3>
-              <p className="mt-2 text-gray-600 dark:text-gray-300">{item.description}</p>
-            </div>
+          {/* Timeline items */}
+          {eduData.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={item.id}
+                className={`mb-12 flex flex-col md:flex-row ${
+                  index % 2 === 0 ? "md:flex-row-reverse" : ""
+                }`}
+              >
+                {/* Timeline point container */}
+                <div className="flex pt-5 justify-center md:w-1/2 relative">
+                  {/* Timeline point */}
+                  <div
+                    className={`absolute left-4 -translate-x-1/2 z-10 w-10 h-10 rounded-full bg-white border-4  flex items-center justify-center ${
+                      index % 2 === 0
+                        ? "md:left-0 border-secondary"
+                        : "md:left-auto md:right-0 md:translate-x-1/2 border-primary"
+                    }`}
+                  >
+                    <Icon className="text-green-950 text-2xl" />
+                  </div>
+                </div>
 
-            {/* Icon */}
-            <div className="relative flex items-center justify-center w-16 h-16">
-              <div className="absolute w-16 h-16 rounded-full border-4 border-secondary flex items-center justify-center bg-white dark:bg-gray-900 z-10">
-                <FaGraduationCap className="text-2xl text-primary" />
+                {/* Content */}
+                <div
+                  className={`md:w-1/2 ${
+                    index % 2 === 0
+                      ? "md:pr-12 md:pl-4 md:text-right"
+                      : "md:pl-12 md:pr-4"
+                  }`}
+                >
+                  <div className=" bg-green-900 p-6 rounded-lg shadow-md mt-6 ml-12 md:ml-0">
+                    <h3 className="text-xl font-bold text-white epun tracking-wide">
+                      {item.degree}
+                    </h3>
+                    <p className="text-gray-200 text-lg mt-2">
+                      {item.period} | <span className="font-semibold">{item.university}</span>
+                    </p>
+                    {item.description && (
+                      <p className="mt-4 text-gray-700">{item.description}</p>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
+            );
+          })}
 
-            {/* Spacer to align */}
-            <div className="flex-1 hidden md:block"></div>
-          </div>
-        ))}
+          {/* Final round point */}
+          {/* <div className="flex justify-center md:w-1/2 relative">
+            <div className="absolute left-4 -translate-x-1/2 md:left-auto md:translate-x-1/2 md:right-0 z-10 w-8 h-8 rounded-full bg-primary"></div>
+          </div> */}
+        </div>
+
+        {/* end */}
       </div>
-    </section>
-      </div>
+
+      {/* End */}
     </div>
   );
 };
