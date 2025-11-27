@@ -9,7 +9,7 @@ import Cp5 from "../../assets/project1/cp-s-5.webp";
 
 const Projects = () => {
   const petImages = [Cp1, Cp2, Cp3, Cp4, Cp5];
-  console.log(petImages)
+  console.log(petImages);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -43,27 +43,100 @@ const Projects = () => {
       {/* Projects Details */}
       <div className="py-10 grid grid-cols-1 lg:grid-cols-2 gap-5">
 
-          {/* Project 1 */}
-        <div className="border border-white rounded-lg p-5 relative">
-          {petImages.map((src, index) => (
-                <img
-                  key={index}
-                  src={src}
-                  alt={`Pet ${index + 1}`}
-                  className={`w-1/2 h-1/2 object-cover object-center absolute  top-0 left-0 transition-opacity duration-1000 ${
-                    index === currentIndex
-                      ? "opacity-100 z-10"
-                      : "opacity-0 z-0"
-                  }`}
-                />
-              ))}
-Hellio
-Hellio ,<br />
-Hellio
-Hellio
-Hellio
+
+        {/* Project 1 */}
+        <div className="border border-white rounded-lg p-5 relative flex flex-col gap-5">
+          <div >
+            {petImages.map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                alt={`Pet ${index + 1}`}
+                className={`w-full h-full object-cover object-center absolute  top-0 left-0 transition-opacity duration-1000 ${
+                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              />
+            ))}
+          </div>
+          <div className="pt-10">
+            <h1 className="font-bold text-2xl">Cuddly Paws</h1>
+            <p className="font-medium text-lg">Pet Adotpion Platform</p>
+            <button>Live</button>
+            <button>Github</button>
+            <button>Details</button>
+          </div>
         </div>
         
+        {/* Project 1 */}
+        <div className="border border-white rounded-lg p-5 relative flex flex-col gap-5">
+          <div >
+            {petImages.map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                alt={`Pet ${index + 1}`}
+                className={`w-full h-full object-cover object-center absolute  top-0 left-0 transition-opacity duration-1000 ${
+                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              />
+            ))}
+          </div>
+          <div className="pt-10">
+            <h1 className="font-bold text-2xl">Cuddly Paws</h1>
+            <p className="font-medium text-lg">Pet Adotpion Platform</p>
+            <button>Live</button>
+            <button>Github</button>
+            <button>Details</button>
+          </div>
+        </div>
+
+        {/* Project 1 */}
+        <div className="border border-white rounded-lg p-5 relative flex flex-col gap-5">
+          <div >
+            {petImages.map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                alt={`Pet ${index + 1}`}
+                className={`w-full h-full object-cover object-center absolute  top-0 left-0 transition-opacity duration-1000 ${
+                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              />
+            ))}
+          </div>
+          <div className="pt-10">
+            <h1 className="font-bold text-2xl">Cuddly Paws</h1>
+            <p className="font-medium text-lg">Pet Adotpion Platform</p>
+            <button>Live</button>
+            <button>Github</button>
+            <button>Details</button>
+          </div>
+        </div>
+
+        {/* Project 1 */}
+        <div className="border border-white rounded-lg p-5 relative flex flex-col gap-5">
+          <div >
+            {petImages.map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                alt={`Pet ${index + 1}`}
+                className={`w-full h-full object-cover object-center absolute  top-0 left-0 transition-opacity duration-1000 ${
+                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              />
+            ))}
+          </div>
+          <div className="pt-10">
+            <h1 className="font-bold text-2xl">Cuddly Paws</h1>
+            <p className="font-medium text-lg">Pet Adotpion Platform</p>
+            <button>Live</button>
+            <button>Github</button>
+            <button>Details</button>
+          </div>
+        </div>
+
+        {/* Project ends */}
       </div>
     </div>
   );
