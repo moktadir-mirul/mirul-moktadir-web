@@ -6,6 +6,7 @@ import Cp2 from "../../assets/project1/cp-s-2.webp";
 import Cp3 from "../../assets/project1/cp-s-3.webp";
 import Cp4 from "../../assets/project1/cp-s-4.webp";
 import Cp5 from "../../assets/project1/cp-s-5.webp";
+import P1 from "../../assets/project1/about-us-image.jpg";
 
 const Projects = () => {
   const petImages = [Cp1, Cp2, Cp3, Cp4, Cp5];
@@ -42,11 +43,47 @@ const Projects = () => {
 
       {/* Projects Details */}
       <div className="py-10 grid grid-cols-1 lg:grid-cols-2 gap-5">
-
+        {/* Project 1 */}
+        <div className="border border-primary rounded-lg p-5 relative flex flex-col gap-5">
+          <div>
+            {/* {petImages.map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                alt={`Pet ${index + 1}`}
+                className={`w-full h-full p-5 object-cover object-center absolute  top-0 left-0 transition-opacity duration-1000 ${
+                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              />
+            ))} */}
+            <img
+              src={P1}
+              alt="Project Image"
+              className="w-full h-full rounded-lg"
+            />
+          </div>
+          <div className="">
+            <h1 className="font-extrabold text-4xl epun tracking-wide">Cuddly Paws</h1>
+            <p className="font-medium text-lg text-justify py-1">
+              Cuddly Paws is a full-stack pet adoption and donation platform
+              where users can list pets, create fundraising campaigns, and
+              manage adoptions, featuring secure authentication, role-based
+              access, responsive design, and real-time data handling.
+            </p>
+            <p className="font-bold text-lg text-justify py-1">
+              → Secure Authentication & Role-Based Access <br />
+              → Pet Adoption & Donation Campaign Management <br />
+              → Fast, Responsive UI with Infinite Scrolling & Dark Mode
+            </p>
+            <button>Live</button>
+            <button>Github</button>
+            <button>Details</button>
+          </div>
+        </div>
 
         {/* Project 1 */}
         <div className="border border-white rounded-lg p-5 relative flex flex-col gap-5">
-          <div >
+          <div>
             {petImages.map((src, index) => (
               <img
                 key={index}
@@ -66,10 +103,10 @@ const Projects = () => {
             <button>Details</button>
           </div>
         </div>
-        
+
         {/* Project 1 */}
         <div className="border border-white rounded-lg p-5 relative flex flex-col gap-5">
-          <div >
+          <div>
             {petImages.map((src, index) => (
               <img
                 key={index}
@@ -92,30 +129,7 @@ const Projects = () => {
 
         {/* Project 1 */}
         <div className="border border-white rounded-lg p-5 relative flex flex-col gap-5">
-          <div >
-            {petImages.map((src, index) => (
-              <img
-                key={index}
-                src={src}
-                alt={`Pet ${index + 1}`}
-                className={`w-full h-full object-cover object-center absolute  top-0 left-0 transition-opacity duration-1000 ${
-                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-                }`}
-              />
-            ))}
-          </div>
-          <div className="pt-10">
-            <h1 className="font-bold text-2xl">Cuddly Paws</h1>
-            <p className="font-medium text-lg">Pet Adotpion Platform</p>
-            <button>Live</button>
-            <button>Github</button>
-            <button>Details</button>
-          </div>
-        </div>
-
-        {/* Project 1 */}
-        <div className="border border-white rounded-lg p-5 relative flex flex-col gap-5">
-          <div >
+          <div>
             {petImages.map((src, index) => (
               <img
                 key={index}
