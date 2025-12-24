@@ -1,9 +1,6 @@
-import { Button } from "flowbite-react";
 import React, { useEffect, useState } from "react";
 import { FaAddressCard, FaUserLarge } from "react-icons/fa6";
 import { TabItem } from "flowbite-react";
-import { HiAdjustments, HiClipboardList, HiUserCircle } from "react-icons/hi";
-import { MdDashboard } from "react-icons/md";
 import { Tabs } from "flowbite-react";
 import { FiCompass } from "react-icons/fi";
 import { GiLotus } from "react-icons/gi";

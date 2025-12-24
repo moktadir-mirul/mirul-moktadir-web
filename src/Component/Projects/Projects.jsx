@@ -1,47 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import DecryptedText from "../../ReactBits/DecryptedText/DecryptedText";
 import { FiLayers } from "react-icons/fi";
-import Cp1 from "../../assets/project1/cp-s-1.webp";
-import Cp2 from "../../assets/project1/cp-s-2.webp";
-import Cp3 from "../../assets/project1/cp-s-3.webp";
-import Cp4 from "../../assets/project1/cp-s-4.webp";
-import Cp5 from "../../assets/project1/cp-s-5.webp";
 import P1 from "../../assets/project1/about-us-image.jpg";
-import { Button, ButtonGroup, createTheme, ThemeProvider } from "flowbite-react";
-import { HiAdjustments, HiCloudDownload, HiUserCircle } from "react-icons/hi";
+import { CgDetailsMore, CgMediaLive } from "react-icons/cg";
+import { FaGithub } from "react-icons/fa6";
+
+
+//     buttonGroup: {
+//     color: {
+//       groupColor: "bg-red-500 hover:bg-red-600",
+//       groupColorSecond: "bg-blue-500 hover:bg-blue-600",
+//     },
+//     size: {
+//       large: "px-6 py-3 text-lg",
+//     },
+//   },
+//   button: {
+//     color: {
+//       primary: "bg-red-500 hover:bg-red-600",
+//       secondary: "bg-blue-500 hover:bg-blue-600",
+//     },
+//     size: {
+//       lg: "px-6 py-3 text-lg",
+//     },
+//   },
+// });
 
 const Projects = () => {
-  const customTheme = createTheme({
-    buttonGroup: {
-    color: {
-      groupColor: "bg-red-500 hover:bg-red-600",
-      groupColorSecond: "bg-blue-500 hover:bg-blue-600",
-    },
-    size: {
-      large: "px-6 py-3 text-lg",
-    },
-  },
-  button: {
-    color: {
-      primary: "bg-red-500 hover:bg-red-600",
-      secondary: "bg-blue-500 hover:bg-blue-600",
-    },
-    size: {
-      lg: "px-6 py-3 text-lg",
-    },
-  },
-});
-  const petImages = [Cp1, Cp2, Cp3, Cp4, Cp5];
+  
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % petImages.length);
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [petImages.length]);
+    
   return (
     <div className="w-11/12 mx-auto py-8 lg:py-12" id="projects">
       {/* Projects Headline */}
@@ -74,9 +62,24 @@ const Projects = () => {
             />
           </div>
           <div className="">
-            <h1 className="font-extrabold text-4xl epun tracking-wide">
-              Cuddly Paws
-            </h1>
+            <div className="flex flex-col">
+              <h1 className="font-extrabold text-4xl epun tracking-wide">
+                Cuddly Paws
+              </h1>
+              <div className="flex flex-wrap items-center py-3 gap-3">
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg">
+                    <CgMediaLive /> Live
+                  </button>
+                </div>
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"> <FaGithub /> Github</button>
+                </div>
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"><CgDetailsMore /> Details</button>
+                </div>
+              </div>
+            </div>
             <p className="font-medium text-lg text-justify py-1">
               Cuddly Paws is a full-stack pet adoption and donation platform
               where users can list pets, create fundraising campaigns, and
@@ -103,96 +106,168 @@ const Projects = () => {
                 JWT
               </p>
             </div>
-            <div className="py-2 flex items-center">
-              {/* <ThemeProvider theme={customTheme}>
-                <ButtonGroup outline>
-                <Button color={"primary"}>
-                  <HiUserCircle className="me-2 h-4 w-4" />
-                  Profile
-                </Button>
-                <Button>
-                  <HiAdjustments className="me-2 h-4 w-4" />
-                  Settings
-                </Button>
-                <Button className="primary">
-                  <HiCloudDownload className="me-3 h-4 w-4" />
-                  Messages
-                </Button>
-              </ButtonGroup>
-              </ThemeProvider> */}
-              <div><button className="px-6 cursor-pointer py-1 text-white  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors hover:text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-xs">Live</button></div><div className="mx-2 text-3xl">|</div>
-              <div ><button>Github</button></div><div className="mx-2 text-3xl">|</div>
-              <div ><button>Details</button></div>
+          </div>
+        </div>
+
+        {/* Project 2 */}
+        <div className="border border-primary rounded-lg p-5 relative flex flex-col gap-5">
+          <div>
+            <img
+              src={P1}
+              alt="Project Image"
+              className="w-full h-full rounded-lg"
+            />
+          </div>
+          <div className="">
+            <div className="flex flex-col">
+              <h1 className="font-extrabold text-4xl epun tracking-wide">
+                Royal Bites Restaurant 
+              </h1>
+              <div className="flex flex-wrap items-center py-3 gap-3">
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg">
+                    <CgMediaLive /> Live
+                  </button>
+                </div>
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"> <FaGithub /> Github</button>
+                </div>
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"><CgDetailsMore /> Details</button>
+                </div>
+              </div>
+            </div>
+            <p className="font-medium text-lg text-justify py-1">
+              A client-side Restaurant Management website where users can add, edit, and order food items as well as manage food items with details. Orders update quantity in real-time, and a gallery page lets users view and enlarge food images.
+            </p>
+            <p className="font-bold text-lg text-justify py-1">
+              → Dynamic Food Management & Ordering <br />
+              → Secure & Smooth User Experience <br />
+              → Easy Search & Responsive Design
+            </p>
+
+            <div className="flex flex-wrap gap-2 py-2">
+              <p className="px-3 py-1 bg-blue-200 text-blue-800 font-bold rounded-lg text-xl">
+                React
+              </p>
+              <p className="px-3 py-1 bg-gray-200 text-gray-800 font-bold rounded-lg text-xl">
+                Express JS
+              </p>
+              <p className="px-3 py-1 bg-green-200 text-green-800 font-bold rounded-lg text-xl">
+                Mongo DB
+              </p>
+              <p className="px-3 py-1 bg-fuchsia-200 text-fuchsia-800 font-bold rounded-lg text-xl">
+                JWT
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Project 1 */}
-        <div className="border border-white rounded-lg p-5 relative flex flex-col gap-5">
+        {/* Project 3 */}
+        <div className="border border-primary rounded-lg p-5 relative flex flex-col gap-5">
           <div>
-            {petImages.map((src, index) => (
-              <img
-                key={index}
-                src={src}
-                alt={`Pet ${index + 1}`}
-                className={`w-full h-full object-cover object-center absolute  top-0 left-0 transition-opacity duration-1000 ${
-                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-                }`}
-              />
-            ))}
+            <img
+              src={P1}
+              alt="Project Image"
+              className="w-full h-full rounded-lg"
+            />
           </div>
-          <div className="pt-10">
-            <h1 className="font-bold text-2xl">Cuddly Paws</h1>
-            <p className="font-medium text-lg">Pet Adotpion Platform</p>
-            <button>Live</button>
-            <button>Github</button>
-            <button>Details</button>
+          <div className="">
+            <div className="flex flex-col">
+              <h1 className="font-extrabold text-4xl epun tracking-wide">
+                Plant Companion
+              </h1>
+              <div className="flex flex-wrap items-center py-3 gap-3">
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg">
+                    <CgMediaLive /> Live
+                  </button>
+                </div>
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"> <FaGithub /> Github</button>
+                </div>
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"><CgDetailsMore /> Details</button>
+                </div>
+              </div>
+            </div>
+            <p className="font-medium text-lg text-justify py-1">
+              An Online Plant Care Tracker where users can add, edit, and manage plants with details like health status and watering schedules. Users can view plant details, and access to certain routes is restricted to authenticated users. . 
+            </p>
+            <p className="font-bold text-lg text-justify py-1">
+              → Secure Authentication & Role-Based Access <br />
+              → Pet Adoption & Donation Campaign Management <br />→ Fast,
+              Responsive UI with Infinite Scrolling & Dark Mode
+            </p>
+
+            <div className="flex flex-wrap gap-2 py-2">
+              <p className="px-3 py-1 bg-blue-200 text-blue-800 font-bold rounded-lg text-xl">
+                React
+              </p>
+              <p className="px-3 py-1 bg-gray-200 text-gray-800 font-bold rounded-lg text-xl">
+                Express JS
+              </p>
+              <p className="px-3 py-1 bg-green-200 text-green-800 font-bold rounded-lg text-xl">
+                Mongo DB
+              </p>
+              <p className="px-3 py-1 bg-fuchsia-200 text-fuchsia-800 font-bold rounded-lg text-xl">
+                JWT
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Project 1 */}
-        <div className="border border-white rounded-lg p-5 relative flex flex-col gap-5">
+        {/* Project 4 */}
+        <div className="border border-primary rounded-lg p-5 relative flex flex-col gap-5">
           <div>
-            {petImages.map((src, index) => (
-              <img
-                key={index}
-                src={src}
-                alt={`Pet ${index + 1}`}
-                className={`w-full h-full object-cover object-center absolute  top-0 left-0 transition-opacity duration-1000 ${
-                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-                }`}
-              />
-            ))}
+            <img
+              src={P1}
+              alt="Project Image"
+              className="w-full h-full rounded-lg"
+            />
           </div>
-          <div className="pt-10">
-            <h1 className="font-bold text-2xl">Cuddly Paws</h1>
-            <p className="font-medium text-lg">Pet Adotpion Platform</p>
-            <button>Live</button>
-            <button>Github</button>
-            <button>Details</button>
-          </div>
-        </div>
+          <div className="">
+            <div className="flex flex-col">
+              <h1 className="font-extrabold text-4xl epun tracking-wide">
+                Career Compass
+              </h1>
+              <div className="flex flex-wrap items-center py-3 gap-3">
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg">
+                    <CgMediaLive /> Live
+                  </button>
+                </div>
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"> <FaGithub /> Github</button>
+                </div>
+                <div>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"><CgDetailsMore /> Details</button>
+                </div>
+              </div>
+            </div>
+            <p className="font-medium text-lg text-justify py-1">
+              An online job portal where users can explore job listings, view details, and apply directly. User authentication is handled with Firebase, supporting email/password and Google login, along with features like password reset, name and photo updates, and protected routes.
+            </p>
+            <p className="font-bold text-lg text-justify py-1">
+              → Secure Authentication & Role-Based Access <br />
+              → Pet Adoption & Donation Campaign Management <br />→ Fast,
+              Responsive UI with Infinite Scrolling & Dark Mode
+            </p>
 
-        {/* Project 1 */}
-        <div className="border border-white rounded-lg p-5 relative flex flex-col gap-5">
-          <div>
-            {petImages.map((src, index) => (
-              <img
-                key={index}
-                src={src}
-                alt={`Pet ${index + 1}`}
-                className={`w-full h-full object-cover object-center absolute  top-0 left-0 transition-opacity duration-1000 ${
-                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-                }`}
-              />
-            ))}
-          </div>
-          <div className="pt-10">
-            <h1 className="font-bold text-2xl">Cuddly Paws</h1>
-            <p className="font-medium text-lg">Pet Adotpion Platform</p>
-            <button>Live</button>
-            <button>Github</button>
-            <button>Details</button>
+            <div className="flex flex-wrap gap-2 py-2">
+              <p className="px-3 py-1 bg-blue-200 text-blue-800 font-bold rounded-lg text-xl">
+                React
+              </p>
+              <p className="px-3 py-1 bg-gray-200 text-gray-800 font-bold rounded-lg text-xl">
+                Express JS
+              </p>
+              <p className="px-3 py-1 bg-green-200 text-green-800 font-bold rounded-lg text-xl">
+                Mongo DB
+              </p>
+              <p className="px-3 py-1 bg-fuchsia-200 text-fuchsia-800 font-bold rounded-lg text-xl">
+                JWT
+              </p>
+            </div>
           </div>
         </div>
 
