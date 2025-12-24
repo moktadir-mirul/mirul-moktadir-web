@@ -2,8 +2,12 @@ import React from "react";
 import DecryptedText from "../../ReactBits/DecryptedText/DecryptedText";
 import { FiLayers } from "react-icons/fi";
 import P1 from "../../assets/project1/about-us-image.jpg";
+import P2 from "../../assets/Project2/projectImage.png";
+import P3 from "../../assets/Project3/projectImage.jpg";
+import P4 from "../../assets/Project4/projectImage.jpg";
 import { CgDetailsMore, CgMediaLive } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa6";
+import { Link } from "react-router";
 
 
 //     buttonGroup: {
@@ -68,15 +72,19 @@ const Projects = () => {
               </h1>
               <div className="flex flex-wrap items-center py-3 gap-3">
                 <div>
+                  <Link to={"https://cuddly-paws.web.app/"} target="_blank">
                   <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg">
                     <CgMediaLive /> Live
-                  </button>
+                  </button></Link>
                 </div>
                 <div>
-                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"> <FaGithub /> Github</button>
+                  <Link to={"https://github.com/moktadir-mirul/cuddly-paws-client"}>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"> <FaGithub /> Github</button></Link>
                 </div>
                 <div>
+                  <Link to={"/cuddly-paws"}>
                   <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"><CgDetailsMore /> Details</button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -113,7 +121,7 @@ const Projects = () => {
         <div className="border border-primary rounded-lg p-5 relative flex flex-col gap-5">
           <div>
             <img
-              src={P1}
+              src={P2}
               alt="Project Image"
               className="w-full h-full rounded-lg"
             />
@@ -167,7 +175,7 @@ const Projects = () => {
         <div className="border border-primary rounded-lg p-5 relative flex flex-col gap-5">
           <div>
             <img
-              src={P1}
+              src={P3}
               alt="Project Image"
               className="w-full h-full rounded-lg"
             />
@@ -221,7 +229,7 @@ const Projects = () => {
         <div className="border border-primary rounded-lg p-5 relative flex flex-col gap-5">
           <div>
             <img
-              src={P1}
+              src={P4}
               alt="Project Image"
               className="w-full h-full rounded-lg"
             />
