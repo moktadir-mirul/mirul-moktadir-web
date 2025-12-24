@@ -14,11 +14,11 @@ const Projects = () => {
   const customTheme = createTheme({
     buttonGroup: {
     color: {
-      primary: "bg-red-500 hover:bg-red-600",
-      secondary: "bg-blue-500 hover:bg-blue-600",
+      groupColor: "bg-red-500 hover:bg-red-600",
+      groupColorSecond: "bg-blue-500 hover:bg-blue-600",
     },
     size: {
-      lg: "px-6 py-3 text-lg",
+      large: "px-6 py-3 text-lg",
     },
   },
   button: {
@@ -89,24 +89,24 @@ const Projects = () => {
               Responsive UI with Infinite Scrolling & Dark Mode
             </p>
 
-            <div className="flex flex-wrap gap-5 py-2">
-              <p className="px-4 py-1 bg-blue-200 text-blue-800 font-bold rounded-lg text-xl">
+            <div className="flex flex-wrap gap-2 py-2">
+              <p className="px-3 py-1 bg-blue-200 text-blue-800 font-bold rounded-lg text-xl">
                 React
               </p>
-              <p className="px-4 py-1 bg-gray-200 text-gray-800 font-bold rounded-lg text-xl">
+              <p className="px-3 py-1 bg-gray-200 text-gray-800 font-bold rounded-lg text-xl">
                 Express JS
               </p>
-              <p className="px-4 py-1 bg-green-200 text-green-800 font-bold rounded-lg text-xl">
+              <p className="px-3 py-1 bg-green-200 text-green-800 font-bold rounded-lg text-xl">
                 Mongo DB
               </p>
-              <p className="px-4 py-1 bg-fuchsia-200 text-fuchsia-800 font-bold rounded-lg text-xl">
+              <p className="px-3 py-1 bg-fuchsia-200 text-fuchsia-800 font-bold rounded-lg text-xl">
                 JWT
               </p>
             </div>
-            <div className="py-1">
-              <ThemeProvider theme={customTheme}>
-                <ButtonGroup outline theme={customTheme} color="primary">
-                <Button>
+            <div className="py-2 flex items-center">
+              {/* <ThemeProvider theme={customTheme}>
+                <ButtonGroup outline>
+                <Button color={"primary"}>
                   <HiUserCircle className="me-2 h-4 w-4" />
                   Profile
                 </Button>
@@ -119,7 +119,10 @@ const Projects = () => {
                   Messages
                 </Button>
               </ButtonGroup>
-              </ThemeProvider>
+              </ThemeProvider> */}
+              <div><button className="px-6 cursor-pointer py-1 text-white  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors hover:text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-xs">Live</button></div><div className="mx-2 text-3xl">|</div>
+              <div ><button>Github</button></div><div className="mx-2 text-3xl">|</div>
+              <div ><button>Details</button></div>
             </div>
           </div>
         </div>
