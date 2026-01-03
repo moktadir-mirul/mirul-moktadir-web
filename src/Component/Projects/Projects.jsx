@@ -170,8 +170,8 @@ const Projects = () => {
               <p className="px-3 py-1 bg-green-200 text-green-800 font-bold rounded-lg text-xl">
                 Mongo DB
               </p>
-              <p className="px-3 py-1 bg-fuchsia-200 text-fuchsia-800 font-bold rounded-lg text-xl">
-                JWT
+              <p className="px-3 py-1 bg-amber-200 text-amber-800 font-bold rounded-lg text-xl">
+                Firebase
               </p>
             </div>
           </div>
@@ -228,8 +228,8 @@ const Projects = () => {
               <p className="px-3 py-1 bg-green-200 text-green-800 font-bold rounded-lg text-xl">
                 Mongo DB
               </p>
-              <p className="px-3 py-1 bg-fuchsia-200 text-fuchsia-800 font-bold rounded-lg text-xl">
-                JWT
+              <p className="px-3 py-1 bg-cyan-200 text-cyan-800 font-bold rounded-lg text-xl">
+                TailwindCSS
               </p>
             </div>
           </div>
@@ -251,15 +251,18 @@ const Projects = () => {
               </h1>
               <div className="flex flex-wrap items-center py-3 gap-3">
                 <div>
+                  <Link to={"https://career-compassjobs.netlify.app/"} target="_blank">
                   <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg">
                     <CgMediaLive color="red"/> Live
-                  </button>
+                  </button></Link>
                 </div>
                 <div>
-                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"> <FaGithub /> Github</button>
+                  <Link to={"https://github.com/moktadir-mirul/career-compass"} target="_blank">
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"> <FaGithub /> Github</button></Link>
                 </div>
                 <div>
-                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"><CgDetailsMore color="blue" size={30}/> Details</button>
+                  <Link to={"/career-compass"}>
+                  <button className="px-5 bg-gradient-to-r from-primary to-secondary cursor-pointer py-1  hover:bg-gradient-to-r hover:from-secondary hover:to-primary duration-200 transition-colors text-black font-bold text-xl shadow-md flex items-center gap-2 rounded-lg"><CgDetailsMore color="blue" size={30}/> Details</button></Link>
                 </div>
               </div>
             </div>
@@ -276,14 +279,14 @@ const Projects = () => {
               <p className="px-3 py-1 bg-blue-200 text-blue-800 font-bold rounded-lg text-xl">
                 React
               </p>
-              <p className="px-3 py-1 bg-gray-200 text-gray-800 font-bold rounded-lg text-xl">
-                Express JS
+              <p className="px-3 py-1 bg-amber-200 text-amber-800 font-bold rounded-lg text-xl">
+                Firebase
               </p>
-              <p className="px-3 py-1 bg-green-200 text-green-800 font-bold rounded-lg text-xl">
-                Mongo DB
+              <p className="px-3 py-1 bg-cyan-200 text-cyan-800 font-bold rounded-lg text-xl">
+                TailwindCSS
               </p>
-              <p className="px-3 py-1 bg-fuchsia-200 text-fuchsia-800 font-bold rounded-lg text-xl">
-                JWT
+              <p className="px-3 py-1 bg-rose-200 text-rose-800 font-bold rounded-lg text-xl">
+                Motion
               </p>
             </div>
           </div>

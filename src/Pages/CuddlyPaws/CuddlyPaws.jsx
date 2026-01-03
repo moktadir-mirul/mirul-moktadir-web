@@ -3,7 +3,7 @@ import React from 'react';
 const CuddlyPaws = () => {
     return (
         <div>
-            Hi
+            Hi from cuddly
         </div>
     );
 };
